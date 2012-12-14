@@ -1,5 +1,11 @@
 Revision history for Time-Duration-id
 
+0.02     2012-12-14 (SHARYANTO)
+
+         Support millisecond (if used together with
+         Time::Duration::Patch::Millisecond).
+
+
 0.01     2012-12-14 (SHARYANTO)
 
          First release.

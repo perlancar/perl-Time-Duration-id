@@ -19,15 +19,18 @@ use constant DEBUG => 0;
 use Time::Duration ();
 
 my %en2id = (
-    #         [singular, plural]
-    second => ["detik", "detik"],
-    minute => ["menit", "menit"],
-    hour   => ["jam"  , "jam"  ],
-    day    => ["hari" , "hari" ],
-    year   => ["tahun", "tahun"],
+    #picosecond  => ["nanodetik" , "pd"],
+    #nanosecond  => ["nanodetik" , "nd"],
+    #microsecond => ["mikrodetik", "μd"],
+    millisecond => ["milidetik" , "md"],
+    second      => ["detik"     , "d" ],
+    minute      => ["menit"     , "m" ],
+    hour        => ["jam"       , "j" ],
+    day         => ["hari"      , "h" ],
+    year        => ["tahun"     , "t" ],
 );
 
-my %short   = map { $_=> substr($_, 0, 1) } map { @$_ } values %en2id;
+my %short   = map { $_->[0] => $_->[1] } values %en2id;
 my $comp_re = join "|", map { $_->[0] } values %en2id;
 
 
@@ -121,7 +124,7 @@ sub _render {
     my $direction = shift @_;
     my @wheel = map {
         ( $_->[1] == 0 ) ? ()  # zero wheels
-            : $_->[1] . " " . $en2id{ $_->[0] }[ $_->[1] == 1 ? 0 : 1 ]
+            : $_->[1] . " " . $en2id{ $_->[0] }[0]
         } @_;
 
     return "baru saja" unless @wheel; # sanity

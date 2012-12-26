@@ -167,6 +167,11 @@ C<Time::Duration::id> is a localized version of C<Time::Duration>.
 See L<Time::Duration>.
 
 
+=head1 CREDITS
+
+The code was first copied from L<Time::Duration::fr>.
+
+
 =head1 SEE ALSO
 
 L<Time::Duration>, L<Time::Duration::Locale>

@@ -169,7 +169,8 @@ See L<Time::Duration>.
 
 =head1 CREDITS
 
-The code was first copied from L<Time::Duration::fr>.
+The code was first copied from L<Time::Duration::fr> by Sébastien
+Aperghis-Tramoni.
 
 
 =head1 SEE ALSO

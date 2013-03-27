@@ -152,14 +152,22 @@ sub _render {
 
 =head1 SYNOPSIS
 
-    use Time::Duration::id;
+ use Time::Duration::id;
+ my $duration = duration(310); # => "5 menit 10 detik"
 
-    my $duration = duration(time() - $start_time);
+Use it along with Time::Duration::Patch::Millisecond:
+
+ use Time::Duration::Patch::Millisecond;
+ use Time::Duration::id;
+ my $duration = duration(3.1); # => "3 detik 100 milidetik"
 
 
 =head1 DESCRIPTION
 
 C<Time::Duration::id> is a localized version of C<Time::Duration>.
+
+It already contains translation for "millisecond" so you can use it with
+L<Time::Duration::Patch::Millisecond>.
 
 
 =head1 FUNCTIONS

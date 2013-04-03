@@ -1,6 +1,6 @@
 package Time::Duration::id;
 
-use 5.010;
+use 5.010001;
 use strict;
 use warnings;
 

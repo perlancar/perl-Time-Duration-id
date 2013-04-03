@@ -1,5 +1,12 @@
 Revision history for Time-Duration-id
 
+0.03     2013-04-03 (SHARYANTO)
+
+         No functional changes. Give credit to Time::Duration::fr. Show example
+         result and how to use with Time::Duration::Patch::Millisecond in
+         Synopsis.
+
+
 0.02     2012-12-14 (SHARYANTO)
 
          Support millisecond (if used together with

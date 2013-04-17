@@ -12,10 +12,13 @@ use constant YEAR   =>  365 * DAY;
 # --------------------------------------------------------------------
 # Basic tests..
 
+$Time::Duration::MILLISECOND = 1;
+
 my @basic_tests = (
     [ duration(    0), '0 detik' ],
     [ duration(    1), '1 detik' ],
     [ duration(   -1), '1 detik' ],
+    [ duration( -1.3), '1 detik 300 milidetik' ],
     [ duration( 3602), '1 jam 2 detik' ],
     [ duration(-3602), '1 jam 2 detik' ],
 
